@@ -1,6 +1,5 @@
 package com.jasmine.springbootdemo;
 
-import com.jasmine.springbootdemo.service.TokenService;
 import jep.Interpreter;
 import jep.SharedInterpreter;
 import org.junit.jupiter.api.Test;
@@ -9,18 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class SpringbootDemoApplicationTests {
-
-	@Autowired
-	private TokenService tokenService;
-
-	@Test
-	void contextLoads() {
-	}
-
-	@Test
-	void testString() {
-		System.out.println(tokenService.getToken());
-	}
 
 	/**
 	 * 测试Java调用Python

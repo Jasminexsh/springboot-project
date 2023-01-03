@@ -87,6 +87,14 @@
 			<version>4.1.0</version>
 		</dependency>
 
+		<!-- 邮箱依赖 -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+
+
 	</dependencies>
 
 </project>
