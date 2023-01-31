@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.jasmine.springboot-demo' is invalid and this project uses 'com.jasmine.springbootdemo' instead.
+* The original package name 'com.jasmine.springboot-demo' is invalid and this project uses 'com.jasmine.springboot' instead.
 
 # Getting Started
 

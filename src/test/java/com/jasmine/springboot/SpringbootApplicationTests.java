@@ -1,13 +1,12 @@
-package com.jasmine.springbootdemo;
+package com.jasmine.springboot;
 
 import jep.Interpreter;
 import jep.SharedInterpreter;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootDemoApplicationTests {
+class SpringbootApplicationTests {
 
 	/**
 	 * 测试Java调用Python
