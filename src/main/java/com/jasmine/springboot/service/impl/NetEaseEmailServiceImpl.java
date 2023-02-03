@@ -18,7 +18,7 @@ import java.util.Properties;
  * 网易邮箱服务实现类
  *
  * @author xieshanghan
- * @version v0.1, 2023/1/4
+ * @version NetEaseEmailServiceImpl.java, v 0.1, 2023年01月04日 15：21 xieshanghan
  */
 @Service
 public class NetEaseEmailServiceImpl implements EmailService {

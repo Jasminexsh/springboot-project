@@ -4,6 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * Hello Controller
+ *
+ * @author xieshanghan
+ * @version HelloController.java, v 0.1, 2023年01月04日 10:45 xieshanghan
+ */
 @Controller
 @RequestMapping("/api/v1/")
 public class HelloController {

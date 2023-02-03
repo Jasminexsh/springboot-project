@@ -4,10 +4,10 @@ import com.jasmine.springboot.model.mail.EmailSessionInfo;
 import com.jasmine.springboot.model.mail.EmailModel;
 
 /**
- * 通用邮箱服务
+ * 邮箱服务
  *
  * @author xieshanghan
- * @version v0.1, 2023/1/4
+ * @version EmailService.java, v 0.1, 2023年01月04日 11：17 xieshanghan
  */
 public interface EmailService {
 

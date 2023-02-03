@@ -15,7 +15,7 @@ import java.util.Date;
  * 网易邮箱定时邮件Job
  *
  * @author xieshanghan
- * @version v0.1, 2023/1/4 0:10 AM
+ * @version NetEaseEmailScheduledJob.java, v 0.1, 2023年01月04日 0:10 xieshanghan
  */
 @Component
 public class NetEaseEmailScheduledJob {

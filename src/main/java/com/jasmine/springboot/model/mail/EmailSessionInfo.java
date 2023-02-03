@@ -4,7 +4,7 @@ package com.jasmine.springboot.model.mail;
  * 邮件会话信息
  *
  * @author xieshanghan
- * @version v0.1, 2023/1/4
+ * @version EmailSessionInfo.java, v 0.1, 2023年01月04日 11:17 xieshanghan
  */
 public class EmailSessionInfo {
 

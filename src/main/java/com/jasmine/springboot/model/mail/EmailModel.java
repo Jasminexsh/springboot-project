@@ -6,7 +6,7 @@ import java.util.Date;
  * 邮件信息
  *
  * @author xieshanghan
- * @version v0.1, 2023/1/4
+ * @version EmailModel.java, v 0.1, 2023年01月04日 10:55 xieshanghan
  */
 public class EmailModel {
 
