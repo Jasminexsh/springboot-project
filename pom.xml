@@ -12,11 +12,13 @@
 	<groupId>com.jasmine</groupId>
 	<artifactId>springboot-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <description>Demo project for Spring Boot</description>
+	<packaging>pom</packaging>
+	<description>Demo project for Spring Boot</description>
 
-    <properties>
+	<properties>
 		<java.version>1.8</java.version>
 		<log4j2.version>2.17.1</log4j2.version>
+		<springboot.project.version>0.0.1-SNAPSHOT</springboot.project.version>
 	</properties>
 
 	<dependencies>
@@ -37,12 +39,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>2.2.2</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -71,6 +67,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.5.7</version>
@@ -87,6 +89,14 @@
 			<groupId>black.ninia</groupId>
 			<artifactId>jep</artifactId>
 			<version>4.1.0</version>
+		</dependency>
+
+		<!-- Junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+			<version>4.13.2</version>
 		</dependency>
 
 		<!-- 邮箱依赖 -->
@@ -114,6 +124,30 @@
 			<groupId>com.alibaba.toolkit.common</groupId>
 			<artifactId>toolkit-common-lang</artifactId>
 			<version>1.2.0</version>
+		</dependency>
+
+		<!-- Transmittable Thread Local -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>transmittable-thread-local</artifactId>
+			<version>2.14.2</version>
+		</dependency>
+
+		<!-- Alibaba Member Info查询 -->
+		<dependency>
+			<groupId>com.alibaba.platform.shared</groupId>
+			<artifactId>xxpt.gateway.shared.client</artifactId>
+			<version>1.0.4.fix</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.9.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version>
 		</dependency>
 
 	</dependencies>

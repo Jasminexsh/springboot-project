@@ -1,9 +1,14 @@
 package com.jasmine.springboot;
 
+import com.jasmine.springboot.service.ZhihuCrawlerService;
 import jep.Interpreter;
 import jep.SharedInterpreter;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.Map;
 
 /**
  * Springboot应用测试类
@@ -14,11 +19,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SpringbootApplicationTests {
 
+	@Autowired
+	private ZhihuCrawlerService zhihuCrawlerService;
+
+	@Value("${enable_email}")
+	private boolean enableEmail;
+
 	/**
-	 * 测试Java调用Python
+	 * Win10测试Java调用Python
 	 */
 //	@Test
-//	void testExecutePython() {
+//	public void testWin10ExecutePython() {
 //		Interpreter interp = new SharedInterpreter();
 //		interp.exec("import pandas as pd");
 //		// any of the following work, these are just pseudo-examples
@@ -29,5 +40,23 @@ class SpringbootApplicationTests {
 //		Object result1 = interp.getValue("x");
 //		System.out.println(result1);
 //	}
+
+	@Test
+	public void testGetZJProvinceTalentInfo() {
+		String city = "杭州";
+		Map<String, String> result = zhihuCrawlerService.getZJTalentInfo(city);
+		for (Map.Entry<String, String> entry : result.entrySet()) {
+			System.out.println(entry.getKey() + ":" + entry.getValue());
+		}
+	}
+
+	@Test
+	public void testGetZJProvinceTop10TalentInfo() {
+		String city = "【浙江|杭州】";
+		Map<String, String> result = zhihuCrawlerService.getZJTop10TalentInfo(city);
+		for (Map.Entry<String, String> entry : result.entrySet()) {
+			System.out.println(entry.getKey() + ":" + entry.getValue());
+		}
+	}
 
 }

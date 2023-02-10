@@ -10,14 +10,14 @@ import java.net.InetAddress;
  * InetAddress工具类
  *
  * @author xieshanghan
- * @version InetAddressUtils.java, v 0.1 2023年02月03日 13:35 xieshanghan
+ * @version InetAddressUtil.java, v 0.1 2023年02月03日 13:35 xieshanghan
  */
-public class InetAddressUtils {
+public class InetAddressUtil {
 
     /**
      * 日志
      */
-    private static final Logger LOGGER = LoggerFactory.getLogger(InetAddressUtils.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(InetAddressUtil.class);
 
     /** 横线  */
     public final static String HORIZONTAL_LINE  = "-";
@@ -31,7 +31,7 @@ public class InetAddressUtils {
     /**
      * 私有构造函数，屏蔽外围调用
      */
-    private InetAddressUtils() {
+    private InetAddressUtil() {
         // ignore
     }
 

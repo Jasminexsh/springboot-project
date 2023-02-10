@@ -2,7 +2,7 @@ package com.jasmine.springboot.service.impl;
 
 import com.jasmine.springboot.model.mail.EmailModel;
 import com.jasmine.springboot.model.mail.EmailSessionInfo;
-import com.jasmine.springboot.service.mail.EmailService;
+import com.jasmine.springboot.service.EmailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
