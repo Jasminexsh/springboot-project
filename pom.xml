@@ -119,14 +119,6 @@
 			<version>${log4j2.version}</version>
 		</dependency>
 
-		<!-- Alibaba Toolkit 工具类-->
-		<dependency>
-			<groupId>com.alibaba.toolkit.common</groupId>
-			<artifactId>toolkit-common-lang</artifactId>
-<!--			<version>1.2.0</version>-->
-			<version>1.1.5</version>
-		</dependency>
-
 		<!-- Transmittable Thread Local -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -134,22 +126,6 @@
 			<version>2.14.2</version>
 		</dependency>
 
-		<!-- Alibaba Member Info查询 -->
-		<dependency>
-			<groupId>com.alibaba.platform.shared</groupId>
-			<artifactId>xxpt.gateway.shared.client</artifactId>
-			<version>1.0.4.fix</version>
-		</dependency>
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>2.9.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.12.0</version>
-		</dependency>
 
 	</dependencies>
 
