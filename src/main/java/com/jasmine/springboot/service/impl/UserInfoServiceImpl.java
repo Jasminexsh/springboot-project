@@ -6,7 +6,6 @@ import com.alibaba.xxpt.gateway.shared.client.http.GetClient;
 import com.jasmine.springboot.model.user.UserInfo;
 import com.jasmine.springboot.service.UserInfoService;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,8 +15,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserInfoServiceImpl implements UserInfoService, InitializingBean {
 
-    private ExecutableClient executableClient;
-
     private static final String HTTPS = "https";
 
     private static final String NICK_NAME_CN = "nickNameCn";
@@ -26,10 +23,10 @@ public class UserInfoServiceImpl implements UserInfoService, InitializingBean {
 
     private static final String GET_USER_BY_NICKNAME_URI = "/rpc/enhancedUserQuery/getUserByNickNameCn.json";
 
-    @Value("${access_key}")
+    private ExecutableClient executableClient;
+
     private String accessKey;
 
-    @Value("${secret_key}")
     private String secretKey;
 
     @Override
@@ -45,6 +42,8 @@ public class UserInfoServiceImpl implements UserInfoService, InitializingBean {
     public void afterPropertiesSet() throws Exception {
         executableClient = new ExecutableClient();
         executableClient.setProtocal(HTTPS);
+        accessKey = "zeroxrisk-I8ATmm2hH1Vl9sJzqeUb";
+        secretKey = "UPTT0iQEiSx36T8dXsvTENth9FHJOIG4V7AfK7di";
         executableClient.setAccessKey(accessKey);
         executableClient.setSecretKey(secretKey);
         executableClient.setDomainName(S_DOMAIN);

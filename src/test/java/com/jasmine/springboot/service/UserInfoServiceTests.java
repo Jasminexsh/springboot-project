@@ -18,7 +18,7 @@ public class UserInfoServiceTests {
 
     @Test
     public void testQueryByNickNameCn() {
-        UserInfo userInfo = userInfoService.queryByNickNameCn("汤扬");
+        UserInfo userInfo = userInfoService.queryByNickNameCn("逸函");
         Assert.assertNotNull(userInfo);
     }
 
