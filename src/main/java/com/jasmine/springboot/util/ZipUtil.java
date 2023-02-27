@@ -1,4 +1,4 @@
-package com.jasmine.springboot.utils;
+package com.jasmine.springboot.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

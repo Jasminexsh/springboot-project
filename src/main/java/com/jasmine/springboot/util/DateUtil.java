@@ -1,4 +1,4 @@
-package com.jasmine.springboot.utils;
+package com.jasmine.springboot.util;
 
 import java.text.SimpleDateFormat;
 import java.time.ZoneId;

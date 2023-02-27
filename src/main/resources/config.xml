@@ -1,0 +1,7 @@
+<config>
+
+    <group name="log">
+        <property name="springboot-project-loggingLevel" defaultValue="info" description="日志级别" />
+    </group>
+
+</config>

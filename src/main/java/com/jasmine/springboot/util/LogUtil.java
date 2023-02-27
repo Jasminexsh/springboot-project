@@ -1,4 +1,4 @@
-package com.jasmine.springboot.utils;
+package com.jasmine.springboot.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,11 +7,11 @@ import org.slf4j.LoggerFactory;
  * 日志工具类
  *
  * @author xieshanghan
- * @version LogUtils.java, v 0.1 2023年02月14日 21:08 xieshanghan
+ * @version LogUtil.java, v 0.1 2023年02月14日 21:08 xieshanghan
  */
-public class LogUtils {
+public class LogUtil {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(LogUtils.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(LogUtil.class);
 
     public static void info(Logger logger, String message) {
         if (logger.isInfoEnabled()) {

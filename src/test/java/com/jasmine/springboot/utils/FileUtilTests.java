@@ -1,10 +1,13 @@
 package com.jasmine.springboot.utils;
 
+import com.jasmine.springboot.util.FileUtil;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author xieshanghan
@@ -79,6 +82,29 @@ public class FileUtilTests {
         File file = new File("/Users/xieshanghan/Desktop/trouble_strategy_uuid.txt");
         long fileSize = FileUtil.getFileSize(file);
         System.out.println(fileSize);
+    }
+
+    @Test
+    public void testDownloadFileFromUrl() {
+        String urlAddress = "https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF";
+        String destDir = "/Users/xieshanghan/idea_ce_projects/springboot-project/files/pics/";
+        String fileName = "pic1.jpg";
+        int overtime = 10 * 1000;
+        Map<String, String> requestProperties = new HashMap<>();
+        requestProperties.put("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36");
+        FileUtil.downloadFromUrl(urlAddress, destDir, fileName);
+//        FileUtil.downloadFromUrl(urlAddress, destDir, fileName, overtime);
+//        FileUtil.downloadFromUrl(urlAddress, destDir, fileName, overtime, requestProperties);
+    }
+
+    @Test
+    public void testDownload() throws Exception {
+        String url = "https://www.usenix.org/system/files/nsdi22-paper-li_guanyu.pdf";
+        String destDir = "/Users/xieshanghan/idea_ce_projects/springboot-project/files";
+        String fileName = "ts.pdf";
+
+        FileUtil.multiThreadDownloadFileFromUrl(url, destDir, fileName);
+
     }
 
 }

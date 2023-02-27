@@ -1,4 +1,4 @@
-package com.jasmine.springboot.demos;
+package com.jasmine.springboot.demo;
 
 import com.alibaba.ttl.TransmittableThreadLocal;
 import com.alibaba.ttl.TtlRunnable;

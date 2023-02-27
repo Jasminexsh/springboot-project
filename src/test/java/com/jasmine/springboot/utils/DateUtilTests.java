@@ -1,6 +1,6 @@
 package com.jasmine.springboot.utils;
 
-import com.jasmine.springboot.utils.DateUtil;
+import com.jasmine.springboot.util.DateUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.ZoneId;
