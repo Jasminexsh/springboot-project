@@ -1,6 +1,6 @@
 package com.jasmine.springboot.util;
 
-import com.alibaba.common.lang.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,7 +38,7 @@ public class NetworkUtil {
      * @return 如果获取成功返回本机IP，否则返回null
      */
     public static String getIp() {
-        if (StringUtil.isBlank(ipAddress)) {
+        if (StringUtils.isBlank(ipAddress)) {
             initInetAddress();
         }
         return ipAddress;
@@ -50,7 +50,7 @@ public class NetworkUtil {
      * @return
      */
     public static String getLocalHostName() {
-        if (StringUtil.isBlank(hostName)) {
+        if (StringUtils.isBlank(hostName)) {
             initInetAddress();
         }
         return hostName;

@@ -40,7 +40,7 @@ public class FileUtil {
     /** */
     private static long downloadByteCount;
 
-    private static ExecutorService downloadThreadPool = DownloadThreadUtil.buildDownloadThreadPool(DOWNLOAD_THREAD_NUM);
+//    private static ExecutorService downloadThreadPool = DownloadThreadUtil.buildDownloadThreadPool(DOWNLOAD_THREAD_NUM);
 
     /**
      *

@@ -1,6 +1,5 @@
 package com.jasmine.springboot.utils;
 
-import com.alipay.analyze.core.engine.perfcap.log.PerfCapDiagnoseLog;
 import com.jasmine.springboot.util.LogUtil;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -20,11 +19,6 @@ public class LogUtilTests {
         System.out.println(ctuDiagnoseStrategy.toLowerCase());
         Logger logger = LoggerFactory.getLogger("CTU-DIAGNOSE-STRATEGY");
         LogUtil.info(logger, "Info Message");
-    }
-
-    @Test
-    public void testCtu() {
-        PerfCapDiagnoseLog.info("ctu-strategy", "strategy");
     }
 
 }

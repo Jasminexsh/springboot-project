@@ -1,5 +1,6 @@
 package com.jasmine.springboot;
 
+import com.jasmine.springboot.service.TalentInfoService;
 import com.jasmine.springboot.service.ZhihuCrawlerService;
 import jep.Interpreter;
 import jep.SharedInterpreter;
@@ -21,6 +22,9 @@ class SpringbootApplicationTests {
 
 	@Autowired
 	private ZhihuCrawlerService zhihuCrawlerService;
+
+	@Autowired
+	private TalentInfoService talentInfoService;
 
 	@Value("${enable_email}")
 	private boolean enableEmail;
@@ -57,6 +61,11 @@ class SpringbootApplicationTests {
 		for (Map.Entry<String, String> entry : result.entrySet()) {
 			System.out.println(entry.getKey() + ":" + entry.getValue());
 		}
+	}
+
+	@Test
+	public void test() {
+		talentInfoService.getInfoByWxMp("");
 	}
 
 }
