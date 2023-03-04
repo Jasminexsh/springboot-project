@@ -1,4 +1,4 @@
-package com.jasmine.springboot.common.model.errors;
+package com.jasmine.springboot.common.errors;
 
 /**
  * 默认错误码

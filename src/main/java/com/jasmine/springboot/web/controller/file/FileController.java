@@ -1,6 +1,6 @@
 package com.jasmine.springboot.web.controller.file;
 
-import com.jasmine.springboot.common.model.BaseResponse;
+import com.jasmine.springboot.common.BaseResponse;
 import com.jasmine.springboot.util.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

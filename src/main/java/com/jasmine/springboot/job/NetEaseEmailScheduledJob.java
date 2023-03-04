@@ -2,8 +2,9 @@ package com.jasmine.springboot.job;
 
 import com.jasmine.springboot.model.mail.EmailModel;
 import com.jasmine.springboot.model.mail.EmailSessionInfo;
+import com.jasmine.springboot.model.talent.TalentInfo;
 import com.jasmine.springboot.service.EmailService;
-import com.jasmine.springboot.service.ZhihuCrawlerService;
+import com.jasmine.springboot.service.TalentInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -38,7 +40,7 @@ public class NetEaseEmailScheduledJob {
     private EmailService emailService;
 
     @Autowired
-    private ZhihuCrawlerService zhihuCrawlerService;
+    private TalentInfoService talentInfoService;
 
     /**
      * 邮件定时发送
@@ -52,12 +54,13 @@ public class NetEaseEmailScheduledJob {
                 EmailSessionInfo receiver = new EmailSessionInfo(RECEIVE, "1148177830@qq.com", "JAsmine");
                 EmailModel emailModel = new EmailModel();
                 emailModel.setSubject(TALENT_TEMPLATE);
-                Map<String, String> top10Info = zhihuCrawlerService.getZJTop10TalentInfo("【浙江|杭州】");
+                List<TalentInfo> talentInfoList = talentInfoService.wxMpCityTalentInfo("杭州");
                 String content = "";
-                for (Map.Entry<String, String> entry : top10Info.entrySet()) {
-                    content = content + entry.getKey() + ": " + entry.getValue() + "\n";
+                for (int i = 0; i < talentInfoList.size(); i++) {
+                    content += talentInfoList.get(i).getArticleTitle();
+                    content += ", " + talentInfoList.get(i).getUrl();
+                    content += "\n";
                 }
-                System.out.println(content);
                 emailModel.setContent(content);
                 emailModel.setSendTime(new Date());
                 emailService.sendEmail(sender, receiver, emailModel);

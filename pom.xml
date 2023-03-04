@@ -81,12 +81,26 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- springboot data jpa starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.47</version>
+		</dependency>
+
 		<!-- springboot mybatis starter -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.2.2</version>
 		</dependency>
+
+
 
 		<!-- httpclient -->
 		<dependency>
@@ -138,12 +152,6 @@
 			<version>${log4j2.version}</version>
 		</dependency>
 
-		<!-- Alibaba Toolkit 工具类-->
-<!--		<dependency>-->
-<!--			<groupId>com.alibaba.toolkit.common</groupId>-->
-<!--			<artifactId>toolkit-common-lang</artifactId>-->
-<!--			<version>1.1.1</version>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>

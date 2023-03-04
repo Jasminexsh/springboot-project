@@ -1,4 +1,4 @@
-package com.jasmine.springboot.common.model.errors;
+package com.jasmine.springboot.common.errors;
 
 /**
  * 错误码接口

@@ -1,6 +1,8 @@
 package com.jasmine.springboot.service;
 
-import java.util.Map;
+import com.jasmine.springboot.model.talent.TalentInfo;
+
+import java.util.List;
 
 /**
  * 人才引进信息获取服务
@@ -10,8 +12,8 @@ import java.util.Map;
  */
 public interface TalentInfoService {
 
-    Map<String, Object> getInfoByZhihu(String zhiHuUrl);
+    List<TalentInfo> wxMpProvinceTalentInfo(String province);
 
-    Map<String, Object> getInfoByWxMp(String wxMpUrl);
+    List<TalentInfo> wxMpCityTalentInfo(String city);
 
 }

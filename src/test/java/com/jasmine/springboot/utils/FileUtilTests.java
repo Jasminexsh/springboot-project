@@ -55,7 +55,7 @@ public class FileUtilTests {
     @Test
     public void testCreateFile() {
         String path = "/Users/xieshanghan/idea_ce_projects/springboot-project/files";
-        String fileName = "test.txt";
+        String fileName = "testTalentInfoService.txt";
         FileUtil.createFile(path, fileName);
     }
 
@@ -69,7 +69,7 @@ public class FileUtilTests {
     @Test
     public void testWriteFile() {
         String dirName = "/Users/xieshanghan/idea_ce_projects/springboot-project/files";
-        String fileName = "test.txt";
+        String fileName = "testTalentInfoService.txt";
         String absolutePath = dirName + FILE_SEPERATOR + fileName;
 
         File file = new File(absolutePath);
@@ -89,12 +89,9 @@ public class FileUtilTests {
         String urlAddress = "https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF";
         String destDir = "/Users/xieshanghan/idea_ce_projects/springboot-project/files/pics/";
         String fileName = "pic1.jpg";
-        int overtime = 10 * 1000;
         Map<String, String> requestProperties = new HashMap<>();
         requestProperties.put("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36");
         FileUtil.downloadFromUrl(urlAddress, destDir, fileName);
-//        FileUtil.downloadFromUrl(urlAddress, destDir, fileName, overtime);
-//        FileUtil.downloadFromUrl(urlAddress, destDir, fileName, overtime, requestProperties);
     }
 
     @Test
@@ -102,9 +99,7 @@ public class FileUtilTests {
         String url = "https://www.usenix.org/system/files/nsdi22-paper-li_guanyu.pdf";
         String destDir = "/Users/xieshanghan/idea_ce_projects/springboot-project/files";
         String fileName = "ts.pdf";
-
         FileUtil.multiThreadDownloadFileFromUrl(url, destDir, fileName);
-
     }
 
 }

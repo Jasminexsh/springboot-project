@@ -16,14 +16,6 @@ import java.util.concurrent.Semaphore;
  */
 public class ThreadPoolDemo {
 
-    public static void main(String[] args) {
-        demo1();
-        demo2();
-        demo3();
-        demo4();
-        demo5();
-    }
-
     /**
      * ThreadLocal 子线程无法取到父线程的值
      */

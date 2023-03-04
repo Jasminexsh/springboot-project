@@ -1,4 +1,4 @@
-package com.jasmine.springboot.common.model;
+package com.jasmine.springboot.common;
 
 import java.io.Serializable;
 import java.util.Objects;
