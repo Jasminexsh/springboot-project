@@ -30,8 +30,10 @@ class SpringbootApplicationTests {
 	public void testTalentInfoService() {
 		List<TalentInfo> wxMpHangZhouTalentInfoList = talentInfoService.wxMpCityTalentInfo("杭州");
 		List<TalentInfo> wxMpZheJiangTalentInfoList = talentInfoService.wxMpProvinceTalentInfo("浙江");
-		Assert.assertNotNull(wxMpHangZhouTalentInfoList);
-		Assert.assertNotNull(wxMpZheJiangTalentInfoList);
+		List<TalentInfo> wxMpJiangSuTalentInfoList = talentInfoService.wxMpProvinceTalentInfo("江苏");
+		Assert.assertEquals(wxMpHangZhouTalentInfoList.size(), 256);
+		Assert.assertEquals(wxMpZheJiangTalentInfoList.size(), 800);
+		Assert.assertEquals(wxMpJiangSuTalentInfoList.size(), 999);
 	}
 
 }

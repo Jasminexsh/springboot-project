@@ -19,34 +19,37 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<log4j2.version>2.17.1</log4j2.version>
+		<common.lang.version>3.12.0</common.lang.version>
 		<springboot.project.version>0.0.1</springboot.project.version>
 	</properties>
 
 	<dependencies>
 
-		<!-- springboot redis starter -->
+		<!-- springboot starter redis -->
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.boot</groupId>-->
 <!--			<artifactId>spring-boot-starter-data-redis</artifactId>-->
 <!--		</dependency>-->
 
-		<!-- springboot mail starter -->
+		<!-- springboot starter mail -->
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.boot</groupId>-->
 <!--			<artifactId>spring-boot-starter-mail</artifactId>-->
 <!--		</dependency>-->
 
-		<!-- springboot quartz starter -->
+		<!-- springboot starter quartz -->
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.boot</groupId>-->
 <!--			<artifactId>spring-boot-starter-quartz</artifactId>-->
 <!--		</dependency>-->
 
+		<!-- springboot starter web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- springboot starter dev tools -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -61,11 +64,25 @@
 <!--			<scope>runtime</scope>-->
 <!--		</dependency>-->
 
+		<!-- Mybatis Generator -->
+		<dependency>
+			<groupId>org.mybatis.generator</groupId>
+			<artifactId>mybatis-generator-core</artifactId>
+			<version>1.3.7</version>
+		</dependency>
+
+		<!-- springboot configuration processor -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+<!--		&lt;!&ndash; springboot starter jdbc &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-jdbc</artifactId>-->
+<!--		</dependency>-->
 
 		<!-- lombok -->
 		<dependency>
@@ -82,10 +99,10 @@
 		</dependency>
 
 		<!-- springboot data jpa starter -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -100,8 +117,6 @@
 			<version>2.2.2</version>
 		</dependency>
 
-
-
 		<!-- httpclient -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
@@ -115,13 +130,6 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.54</version>
 			<scope>compile</scope>
-		</dependency>
-
-		<!-- jep -->
-		<dependency>
-			<groupId>black.ninia</groupId>
-			<artifactId>jep</artifactId>
-			<version>4.1.0</version>
 		</dependency>
 
 		<!-- Junit -->
@@ -180,5 +188,46 @@
 		</dependency>
 
 	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- mybatis.generator插件 -->
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.7</version>
+				<configuration>
+					<!--配置XML文件地址，以下为根目录，如果是resources，则为：src/main/resources/generatorConfig.xml -->
+					<!-- <configurationFile>generatorConfig.xml</configurationFile> -->
+					<configurationFile>src/main/resources/generatorConfig.xml</configurationFile>
+					<!--允许移动生成的文件 -->
+					<verbose>true</verbose>
+					<!--是否覆盖 -->
+					<overwrite>true</overwrite>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>*.properties</include>
+					<include>*.xml</include>
+					<include>**/*.xml</include>
+					<include>**/*.properties</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+	</build>
 
 </project>

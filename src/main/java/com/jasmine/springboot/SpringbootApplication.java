@@ -1,8 +1,8 @@
 package com.jasmine.springboot;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
@@ -12,7 +12,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @version SpringbootApplication.java, v 0.1, 2023年01月04日 10:47 xieshanghan
  */
 @EnableScheduling
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
+@MapperScan("com.jasmine.springboot.dal.daointerface")
 public class SpringbootApplication {
 
 	public static void main(String[] args) {

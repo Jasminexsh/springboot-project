@@ -38,7 +38,7 @@ public class TalentInfoServiceImpl implements TalentInfoService {
 
     static {
         wxMpProvince2AlbumId.put("浙江", "1958283018024828934");
-        wxMpProvince2AlbumId.put("江苏", "");
+        wxMpProvince2AlbumId.put("江苏", "1957218495381684229");
 
         wxMpCity2AlbumId.put("杭州", "1964765046371041282");
         wxMpCity2AlbumId.put("宁波", "1959717058447720453");
@@ -125,10 +125,6 @@ public class TalentInfoServiceImpl implements TalentInfoService {
         String iterationIndex = key[2];
         for (int i = 0; i < iterationNumber; i++) {
             String iterationUrl = String.format(WX_MP_ITERATION_TEMPLATE, albumId, iterationMsgId, iterationIndex);
-
-            //debug
-            System.out.println(iterationUrl);
-
             JSONObject iterationJson20 = doHttpGetRequest(iterationUrl);
             List<TalentInfo> talentInfoList = getWxMpArticleList(iterationJson20);
             talentInfoListTotal.addAll(talentInfoList);
